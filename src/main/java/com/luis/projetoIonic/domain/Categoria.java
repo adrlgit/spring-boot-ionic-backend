@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 
 
 @Entity
-public class Categoria implements Serializable  {
+public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -52,11 +52,11 @@ public class Categoria implements Serializable  {
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
-	
+
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -82,5 +82,4 @@ public class Categoria implements Serializable  {
 		return true;
 	}
 
-	
 }

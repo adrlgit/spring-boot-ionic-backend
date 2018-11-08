@@ -15,13 +15,13 @@ import com.luis.projetoIonic.domain.enums.EstadoPagamento;
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
-public abstract class Pagamento implements Serializable  {
+public abstract class Pagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	private Integer id;
 	private Integer estado;
-	
+
 	@JsonIgnore
 	@OneToOne
 	@JoinColumn(name="pedido_id")
@@ -86,5 +86,7 @@ public abstract class Pagamento implements Serializable  {
 			return false;
 		return true;
 	}
+	
+	
 	
 }
